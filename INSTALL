@@ -1,0 +1,133 @@
+GUIDE TO INSTALLING HOES
+
+This guide will be referring to a modified version of shades' bitches.
+I call it hoes so as not to be confused between versions. It is still referred 
+as bitches in the database models because I didn't feel like touching that. 
+
+
+TODO:
+
+This is an outline of what you will be doing in this guide.
+
+- Install necessary gems.
+- Set variables in .env
+  * Change sqlite db location. You can run the db in RAM but it tends to get 
+    cleared from memory within a few minutes on my system. Having a file may
+	increase latency but it's much more stable.
+  * Set location of heroku gallery (enabled but not used currently)
+- Set help message in app.rb (line 107).
+- Set quit message in app.rb (line 121). Currently it is "brb".
+- Update links in lib/cinch/plugins/links.rb
+- Configure help.html to whatever you need it to be
+  * https://github.com/britishtea/bitches/blob/master/docs/HELP.md
+  * !links is not in help.html
+  * Media section is not in help.html
+  * big_brother is not documented anywhere
+- Finally get hoes running.
+- Configure big_brother if desired (I could never get it working though)
+
+
+
+CHANGES:
+
+These are things that I have added/changed from the original bitches circa 
+December 2013 that will be included. I have other things in my version but 
+have removed them to sanitize everything.
+
+- Updated !slang to use lib/cinch/plugins/urbandictionary.rb since original 
+  plugin stopped working
+
+- Added windchill calculator to weather.rb. You can remove this if you wish 
+  as well as Tomorrow's forecast (tomorrows temps are always a bit off anyway)
+
+- Added a reminder command. This involves lib/cinch/plugins/reminder.rb, 
+  lib/cinch/plugins/a_reminder.rb, and reminders.csv. You can remove this 
+  plugin if you wish, just be sure to remove its listing in app.rb in the 
+  require section and in the c.plugins.plugins block (line 48) as well 
+  as the help.html file (if you use that).
+ 
+- I have also gone through the commits for bitches and implemented any that I 
+  saw fit to add in. Hoes was forked from bitches on 20-11-2013.
+
+
+INSTALL:
+
+First, you will want to install some basic gems to help with the installation 
+of everything else:
+
+$ gem install rdoc
+$ gem install dep
+
+Go to in the directory where you have hoes and run:
+
+$ dep install
+
+So what I have below is this list of all gems that are required by each plugin 
+and cinch itself. This list is not definitive as some gems have dependencies 
+not listed unless you try to install it. This list is included in .gems:
+
+cinch -v 2.0.10
+cinch-authentication -v 0.1.0
+cinch-identify -v 1.4.1
+data_mapper -v 1.2.0
+dm-postgres-adapter -v 1.2.0
+dm-sqlite-adapter -v 1.2.0
+dotenv -v 0.8.0
+google-search -v 1.0.3
+filmbuff -v 0.1.6
+httparty -v 0.12.0
+json -v 1.8.1
+lastfm -v 1.16.0
+nokogiri -v 1.5.10
+retryable-rb -v 1.1.0
+rufus-scheduler -v 3.0.7
+shortly -v 0.3.3
+slop -v 3.4.3
+urban_dictionary -v 0.0.2
+whatcd -v 0.1.5
+wikipedia-client -v 1.0.0
+yahoo_weatherman -v 2.0.0
+youtube_it -v 2.1.13
+
+Remember, all of these gems will be installed after running "$ dep install". 
+There is still one more gem you will need though, 
+
+$ git clone https://github.com/britishtea/cinch-imdb.git
+$ cd cinch-imdb/
+$ gem build cinch-imdb.gemspec
+$ gem install ./cinch-imdb-1.2.1.gem
+
+This is shades' own version of cinch-imdb. There exists one in the gem repo 
+but it won't work for us.
+
+After this, you will want to edit the .env file for the necessary info. You 
+will need to get a last.fm api account: http://www.last.fm/api/account/create
+
+You will also need to update the sqlite db location. Currently it is set as:
+DATABASE_URL="sqlite:////home/user/hoes/hoes.db"
+Update it to be where ever you want and yes, you need all of those slashes. Be 
+sure to create an empty file first! Also, if you do not wish to use SSL, 
+simply delete the SSL="true" line and change the port number to 6667.
+
+At this point, you might want to update some of the aesthetic things that I 
+mentioned earlier in the TODO.
+
+Everything should be ready to run at this point. Open up a new screen session 
+on your box and run in the hoes directory:
+
+$ ruby -I lib/ app.rb
+
+You should see hoes connecting to the network and then spitting out the IRCd.
+It will take a moment for the bot to fully start up and reply back to commands.
+
+
+ISSUES:
+
+If something goes wrong, don't panic. Look at the errors. Chances are you will 
+see something that resembles:
+
+`require': cannot load such file -- youtube_it (LoadError)
+
+or something similar. Just install that gem, in this example I would be 
+missing youtube_it. If there is some other issue or just have a question, 
+hit me up since I probably had the same issue or question too.
