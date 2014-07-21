@@ -1,24 +1,19 @@
-# Bitches
+# Hoes
 
 ## What is it?
 
 Bitches is an IRC bot written for [#indie](irc://irc.what-network.com/#indie).
 It is written in Ruby and relies on [Cinch](https://github.com/cinchrb/cinch).
+Hoes is an older fork of bitches by [britishtea](https://github.com/britishtea).
 
 ## Installation
 
 
-1. Clone the repository: `git clone git://github.com/britishtea/bitches.git
- bitches && cd bitches`.
-2. Install dependencies: `dep install`.
-3. Edit the .env file to configure the environment. 
-4. Run it: `ruby -I lib app.rb`.
+1. Clone the repository: `git clone git://github.com/moftz/hoes.git && cd bitches`.
+2. Read INSTALL to learn how to setup hoes.
+3. Run it: `ruby -I lib app.rb`.
 
 Note: You'll need Ruby 1.9.3 or higher and [git](http://git-scm.com/).
-
-## Usage
-
-See [HELP.md](https://github.com/britishtea/bitches/blob/master/HELP.md).
 
 ## License - MIT License
 
