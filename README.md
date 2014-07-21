@@ -9,7 +9,7 @@ Hoes is an older fork of bitches by [britishtea](https://github.com/britishtea).
 ## Installation
 
 
-1. Clone the repository: `git clone git://github.com/moftz/hoes.git && cd bitches`.
+1. Clone the repository: `git clone git://github.com/moftz/hoes.git && cd hoes`.
 2. Read INSTALL to learn how to setup hoes.
 3. Run it: `ruby -I lib app.rb`.
 
