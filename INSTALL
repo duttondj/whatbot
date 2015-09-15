@@ -1,11 +1,10 @@
-GUIDE TO INSTALLING HOES
+GUIDE TO INSTALLING whatbot
 
-This guide will be referring to a modified version of shades' bitches.
-I call it hoes so as not to be confused between versions. It is still referred 
-as bitches in the database models because I didn't feel like touching that. 
+This guide will be referring to a modified version of shades' bot called bitches.
+I call it whatbot so as not to be confused between versions. It is still referred 
+as bitches in the database models because I didn't want to touch that. 
 
-
-TODO:
+SUMMARY:
 
 This is an outline of what you will be doing in this guide.
 
@@ -23,7 +22,7 @@ This is an outline of what you will be doing in this guide.
   * !links is not in help.html
   * Media section is not in help.html
   * big_brother is not documented anywhere
-- Finally get hoes running.
+- Finally get whatbot running.
 - Configure big_brother if desired (I could never get it working though)
 
 
@@ -32,7 +31,7 @@ CHANGES:
 
 These are things that I have added/changed from the original bitches circa 
 December 2013 that will be included. I have other things in my version but 
-have removed them to sanitize everything.
+have removed them to sanitize everything for a public repo.
 
 - Updated !slang to use lib/cinch/plugins/urbandictionary.rb since original 
   plugin stopped working
@@ -47,7 +46,7 @@ have removed them to sanitize everything.
   as the help.html file (if you use that).
  
 - I have also gone through the commits for bitches and implemented any that I 
-  saw fit to add in. Hoes was forked from bitches on 20-11-2013.
+  saw fit to add in. whatbot was forked from bitches on 20-11-2013.
 
 
 INSTALL:
@@ -58,7 +57,7 @@ of everything else:
 $ gem install rdoc
 $ gem install dep
 
-Go to in the directory where you have hoes and run:
+Go to in the directory where you have whatbot and run:
 
 $ dep install
 
@@ -104,20 +103,21 @@ After this, you will want to edit the .env file for the necessary info. You
 will need to get a last.fm api account: http://www.last.fm/api/account/create
 
 You will also need to update the sqlite db location. Currently it is set as:
-DATABASE_URL="sqlite:////home/user/hoes/hoes.db"
+DATABASE_URL="sqlite:////home/user/whatbot/whatbot.db"
 Update it to be where ever you want and yes, you need all of those slashes. Be 
-sure to create an empty file first! Also, if you do not wish to use SSL, 
-simply delete the SSL="true" line and change the port number to 6667.
+sure to create an empty file first if there is none already! Also, if you do 
+not wish to use SSL, simply delete the SSL="true" line and change the port 
+number to 6667.
 
 At this point, you might want to update some of the aesthetic things that I 
 mentioned earlier in the TODO.
 
 Everything should be ready to run at this point. Open up a new screen session 
-on your box and run in the hoes directory:
+on your box and run in the whatbot directory:
 
 $ ruby -I lib/ app.rb
 
-You should see hoes connecting to the network and then spitting out the IRCd.
+You should see whatbot connecting to the network and then spitting out the IRCd.
 It will take a moment for the bot to fully start up and reply back to commands.
 
 
@@ -130,4 +130,4 @@ see something that resembles:
 
 or something similar. Just install that gem, in this example I would be 
 missing youtube_it. If there is some other issue or just have a question, 
-hit me up since I probably had the same issue or question too.
+hit me up since I probably had the same issue/question too.
