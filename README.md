@@ -1,16 +1,16 @@
-# Hoes
+# Whatbot
 
 ## What is it?
 
-Bitches is an IRC bot written for [#indie](irc://irc.what-network.com/#indie).
+Whatbot is an IRC bot written for [#indie](irc://irc.what-network.com/#indie).
 It is written in Ruby and relies on [Cinch](https://github.com/cinchrb/cinch).
-Hoes is an older fork of bitches by [britishtea](https://github.com/britishtea).
+It is an older fork of the bot by [britishtea](https://github.com/britishtea).
 
 ## Installation
 
 
-1. Clone the repository: `git clone git://github.com/moftz/hoes.git && cd hoes`.
-2. Read INSTALL to learn how to setup hoes.
+1. Clone the repository: `git clone git://github.com/duttondj/whatbot.git && cd hoes`.
+2. Read INSTALL to learn how to setup whatbot.
 3. Run it: `ruby -I lib app.rb`.
 
 Note: You'll need Ruby 1.9.3 or higher and [git](http://git-scm.com/).
