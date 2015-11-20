@@ -91,13 +91,13 @@ youtube_it -v 2.1.13
 Remember, all of these gems will be installed after running "$ dep install". 
 There is still one more gem you will need though, 
 
-$ git clone https://github.com/britishtea/cinch-imdb.git
+$ git clone https://github.com/duttondj/cinch-imdb.git
 $ cd cinch-imdb/
 $ gem build cinch-imdb.gemspec
 $ gem install ./cinch-imdb-1.2.1.gem
 
-This is shades' own version of cinch-imdb. There exists one in the gem repo 
-but it won't work for us.
+This is shades' own version of cinch-imdb, forked by me to keep it frozen.
+There exists one in the gem repo but it won't work for us.
 
 After this, you will want to edit the .env file for the necessary info. You 
 will need to get a last.fm api account: http://www.last.fm/api/account/create
@@ -110,7 +110,7 @@ not wish to use SSL, simply delete the SSL="true" line and change the port
 number to 6667.
 
 At this point, you might want to update some of the aesthetic things that I 
-mentioned earlier in the TODO.
+mentioned earlier in the SUMMARY.
 
 Everything should be ready to run at this point. Open up a new screen session 
 on your box and run in the whatbot directory:
@@ -131,3 +131,11 @@ see something that resembles:
 or something similar. Just install that gem, in this example I would be 
 missing youtube_it. If there is some other issue or just have a question, 
 hit me up since I probably had the same issue/question too.
+
+EDIT 2015/11/19: This document contains everything I know about this bot so if
+you have any questions, I don't know if I can help. Whatbot is a real pain in
+the behind but works great usually. Timeouts can screw up the nick but a simple
+reconnect or by adding in a command like !nickfix can reset the nick to what it
+should be. I think the version I have has some ghost commands it runs on startup
+and even associates with Drone so that has fixed a lot of issues in the past like
+when whatbot is trying to join an invite only chan that is controlled by Drone.
