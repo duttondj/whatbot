@@ -9,7 +9,7 @@ It is an older fork of the bot by [britishtea](https://github.com/britishtea/bit
 ## Installation
 
 
-1. Clone the repository: `git clone git://github.com/duttondj/whatbot.git && cd whatbot`
+1. Clone the repository: `git clone git://github.com/duttondj/whatbot.git ; cd whatbot`
 2. Read INSTALL to learn how to setup whatbot.
 3. Run it: `ruby -I lib app.rb`
 
