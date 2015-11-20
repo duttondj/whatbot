@@ -4,7 +4,7 @@
 
 Whatbot is an IRC bot written for [#indie](irc://irc.what-network.com/#indie).
 It is written in Ruby and relies on [Cinch](https://github.com/cinchrb/cinch).
-It is an older fork of the bot by [britishtea](https://github.com/britishtea).
+It is an older fork of the bot by [britishtea](https://github.com/britishtea/bitches).
 
 ## Installation
 
@@ -16,8 +16,6 @@ It is an older fork of the bot by [britishtea](https://github.com/britishtea).
 Note: You'll need Ruby 1.9.3 or higher and [git](http://git-scm.com/).
 
 ## License - MIT License
-
-Copyright (C) 2012 Paul Brickfeld
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
